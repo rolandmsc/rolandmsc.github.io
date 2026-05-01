@@ -7,40 +7,65 @@
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Arial;
-      background: #eef6ff;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
+      background: #f4f8ff;
+      color: #1a1a1a;
+      line-height: 1.6;
     }
 
+    /* 顶部标题 */
     header {
-      padding: 40px 20px 20px;
+      padding: 40px 24px 10px;
       font-size: 28px;
-      font-weight: bold;
+      font-weight: 600;
       color: #2a6df4;
     }
 
+    /* 导航栏 */
+    nav {
+      padding: 8px 24px 16px;
+      border-bottom: 1px solid #e0e8f5;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a6fdc;
+      margin-right: 18px;
+    }
+
+    /* 主体 */
     .container {
-      padding: 20px;
+      max-width: 680px;
+      padding: 30px 24px;
     }
 
+    /* 标题 */
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #5a6b8c;
+      letter-spacing: 0.5px;
+    }
+
+    /* 列表项 */
     .item {
-      padding: 14px 16px;
-      margin-bottom: 10px;
-      background: #dbeaff;
-      border-radius: 8px;
-      transition: 0.2s;
-    }
-
-    .item:hover {
-      background: #c7ddff;
+      padding: 12px 0;
+      border-bottom: 1px solid #e6edf7;
     }
 
     .item a {
       text-decoration: none;
-      color: #1a4fd8;
-      font-size: 18px;
-      display: block;
+      color: #1f4ed8;
+      font-size: 16px;
+      transition: 0.15s;
     }
+
+    .item a:hover {
+      opacity: 0.6;
+    }
+
   </style>
 </head>
 
@@ -50,9 +75,14 @@
   Roland
 </header>
 
+<nav>
+  <a href="#">首页</a>
+</nav>
+
 <div class="container">
 
-  <!-- 目录项 -->
+  <h2>目录</h2>
+
   <div class="item">
     <a href="page1.html">我的第一篇页面</a>
   </div>
