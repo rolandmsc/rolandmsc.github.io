@@ -2,10 +2,100 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>我的第一个网站</title>
+  <title>Roland 的个人网站</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px;
+      background: white;
+    }
+
+    .projects {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello World</h1>
-  <p>我成功上线了！</p>
+
+<header>
+  <h1>Roland 的网站</h1>
+</header>
+
+<nav>
+  <a href="#">首页</a>
+  <a href="#">项目</a>
+  <a href="#">联系</a>
+</nav>
+
+<section class="hero">
+  <h2>欢迎来到我的网站 👋</h2>
+  <p>我正在学习网页开发</p>
+  <button onclick="showMessage()">点我</button>
+</section>
+
+<section class="projects">
+  <div class="card">
+    <h3>项目1</h3>
+    <p>这是我的第一个项目</p>
+  </div>
+
+  <div class="card">
+    <h3>项目2</h3>
+    <p>这是我的第二个项目</p>
+  </div>
+</section>
+
+<script>
+  function showMessage() {
+    alert("你点击了按钮！");
+  }
+</script>
+
 </body>
 </html>
