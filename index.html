@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Roland's personal website about economics, finance, political philosophy, business, travel, and current affairs."
+    content="Roland's personal website about economics, finance, political philosophy, business, travel, current affairs, and Christian faith."
   >
 
   <title>Roland | Independent Thinker</title>
@@ -18,6 +18,7 @@
   <style>
     :root {
       --blue-900: #173f70;
+      --blue-800: #1f578e;
       --blue-700: #286fb7;
       --blue-600: #428fe0;
       --blue-500: #5ca7f2;
@@ -35,8 +36,9 @@
       --text-light: #8a98aa;
 
       --border: rgba(64, 126, 188, 0.14);
+
       --shadow:
-        0 18px 50px rgba(57, 119, 181, 0.10);
+        0 18px 50px rgba(57, 119, 181, 0.1);
 
       --shadow-hover:
         0 28px 70px rgba(48, 108, 170, 0.18);
@@ -72,7 +74,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    body::selection {
+    ::selection {
       color: var(--blue-900);
       background: var(--blue-200);
     }
@@ -99,14 +101,13 @@
       transition:
         padding 0.3s ease,
         background 0.3s ease,
-        box-shadow 0.3s ease,
-        backdrop-filter 0.3s ease;
+        box-shadow 0.3s ease;
     }
 
     .site-header.scrolled {
       padding-top: 12px;
       padding-bottom: 12px;
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.74);
       box-shadow:
         0 10px 35px rgba(47, 103, 158, 0.08);
       backdrop-filter: blur(18px);
@@ -124,7 +125,7 @@
       justify-content: space-between;
       border: 1px solid rgba(255, 255, 255, 0.24);
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
       transition:
@@ -178,7 +179,7 @@
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.3px;
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.84);
       text-decoration: none;
       transition: color 0.25s ease;
     }
@@ -292,9 +293,7 @@
       width: 100%;
       max-width: 1180px;
       margin: 0 auto;
-      padding:
-        150px 24px
-        90px;
+      padding: 150px 24px 100px;
       position: relative;
       z-index: 2;
     }
@@ -356,7 +355,6 @@
       margin: 0;
       font-size: clamp(17px, 2vw, 20px);
       line-height: 1.75;
-      font-weight: 400;
       color: rgba(255, 255, 255, 0.92);
       opacity: 0;
       animation: fadeUp 0.9s ease forwards 0.5s;
@@ -399,7 +397,6 @@
       border-radius: 13px;
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.2px;
       text-decoration: none;
       transition:
         transform 0.25s ease,
@@ -427,7 +424,7 @@
     .button-secondary {
       color: var(--white);
       border: 1px solid rgba(255, 255, 255, 0.38);
-      background: rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
@@ -475,6 +472,130 @@
           rgba(255, 255, 255, 0.9),
           rgba(255, 255, 255, 0)
         );
+    }
+
+    /* =========================
+       SCRIPTURE
+    ========================= */
+
+    .scripture-section {
+      padding: 110px 24px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          180deg,
+          #eaf6ff 0%,
+          #f7fbff 48%,
+          #ffffff 100%
+        );
+    }
+
+    .scripture-section::before {
+      content: "";
+      width: 440px;
+      height: 440px;
+      position: absolute;
+      top: -270px;
+      left: 50%;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(104, 176, 240, 0.2),
+          rgba(104, 176, 240, 0)
+        );
+      transform: translateX(-50%);
+    }
+
+    .scripture-section::after {
+      content: "";
+      width: 1px;
+      height: 60px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(92, 167, 242, 0),
+          rgba(92, 167, 242, 0.5)
+        );
+    }
+
+    .scripture-inner {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .scripture-label {
+      margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      color: var(--blue-600);
+      text-transform: uppercase;
+    }
+
+    .scripture-label::before,
+    .scripture-label::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--blue-300);
+    }
+
+    .scripture-mark {
+      height: 48px;
+      margin-bottom: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 64px;
+      line-height: 1;
+      color: var(--blue-300);
+    }
+
+    .scripture-text {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(21px, 3vw, 29px);
+      line-height: 1.75;
+      font-weight: 400;
+      color: var(--blue-900);
+    }
+
+    .scripture-verse {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .scripture-highlight {
+      font-style: italic;
+      color: var(--blue-700);
+    }
+
+    .scripture-reference {
+      margin-top: 28px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      color: var(--blue-600);
+      text-transform: uppercase;
+    }
+
+    .scripture-divider {
+      width: 42px;
+      height: 1px;
+      margin: 28px auto 0;
+      background: var(--blue-300);
     }
 
     /* =========================
@@ -545,7 +666,7 @@
     }
 
     /* =========================
-       ABOUT
+       INTERESTS
     ========================= */
 
     .about-layout {
@@ -586,8 +707,8 @@
       background:
         linear-gradient(
           145deg,
-          rgba(255, 255, 255, 0.95),
-          rgba(245, 251, 255, 0.95)
+          rgba(255, 255, 255, 0.96),
+          rgba(245, 251, 255, 0.96)
         );
       box-shadow:
         0 8px 28px rgba(55, 113, 169, 0.055);
@@ -659,7 +780,7 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-large);
       color: var(--text);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       box-shadow:
         0 12px 38px rgba(49, 108, 166, 0.065);
       text-decoration: none;
@@ -1035,14 +1156,25 @@
       }
 
       .hero-inner {
-        padding:
-          130px 22px
-          105px;
+        padding: 130px 22px 105px;
       }
 
       .hero h1 {
         font-size: clamp(50px, 16vw, 76px);
         letter-spacing: -3px;
+      }
+
+      .scripture-section {
+        padding: 82px 22px;
+      }
+
+      .scripture-text {
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      .scripture-mark {
+        font-size: 52px;
       }
 
       .section {
@@ -1067,9 +1199,7 @@
       }
 
       .contact-section {
-        padding:
-          20px 20px
-          80px;
+        padding: 20px 20px 80px;
       }
 
       .contact-box {
@@ -1158,7 +1288,10 @@
 
   <header class="site-header" id="siteHeader">
     <nav class="navbar">
-      <a class="logo" href="#home">ROLAND</a>
+
+      <a class="logo" href="#home">
+        ROLAND
+      </a>
 
       <div class="nav-links">
         <a href="#home">Home</a>
@@ -1166,12 +1299,13 @@
         <a href="#projects">Projects</a>
         <a href="#articles">Writing</a>
       </div>
+
     </nav>
   </header>
 
-  <!-- Hero -->
-
   <main>
+
+    <!-- Hero -->
 
     <section class="hero" id="home">
 
@@ -1193,7 +1327,7 @@
 
         <p class="hero-description">
           Writing about markets, political ideas, business,
-          travel, and the changing modern world.
+          travel, faith, and the changing modern world.
         </p>
 
         <div class="hero-keywords">
@@ -1230,12 +1364,62 @@
 
       <a
         class="scroll-indicator"
-        href="#about"
-        aria-label="Scroll to interests"
+        href="#scripture"
+        aria-label="Scroll to scripture"
       >
         <span>Scroll</span>
         <div class="scroll-line"></div>
       </a>
+
+    </section>
+
+    <!-- Scripture -->
+
+    <section
+      class="scripture-section"
+      id="scripture"
+    >
+
+      <div class="scripture-inner reveal">
+
+        <div class="scripture-label">
+          Scripture
+        </div>
+
+        <div
+          class="scripture-mark"
+          aria-hidden="true"
+        >
+          “
+        </div>
+
+        <blockquote class="scripture-text">
+
+          <span class="scripture-verse">
+            Therefore we are always confident, knowing that,
+            whilst we are at home in the body,
+            we are absent from the Lord:
+          </span>
+
+          <span class="scripture-verse scripture-highlight">
+            For we walk by faith, not by sight:
+          </span>
+
+          <span class="scripture-verse">
+            We are confident, I say, and willing rather
+            to be absent from the body,
+            and to be present with the Lord.
+          </span>
+
+        </blockquote>
+
+        <div class="scripture-reference">
+          2 Corinthians 5:6–8 · KJV
+        </div>
+
+        <div class="scripture-divider"></div>
+
+      </div>
 
     </section>
 
@@ -1265,8 +1449,9 @@
           </p>
 
           <div class="about-quote">
-            Curiosity, intellectual independence, and clear thinking
-            are the foundations of meaningful inquiry.
+            Curiosity, intellectual independence, faith,
+            and clear thinking are the foundations
+            of meaningful inquiry.
           </div>
 
         </div>
@@ -1274,7 +1459,10 @@
         <div class="interest-list">
 
           <article class="interest-item reveal">
-            <div class="interest-number">01</div>
+
+            <div class="interest-number">
+              01
+            </div>
 
             <div>
               <h3>Economics & Finance</h3>
@@ -1285,11 +1473,17 @@
               </p>
             </div>
 
-            <div class="interest-icon">→</div>
+            <div class="interest-icon">
+              →
+            </div>
+
           </article>
 
           <article class="interest-item reveal">
-            <div class="interest-number">02</div>
+
+            <div class="interest-number">
+              02
+            </div>
 
             <div>
               <h3>
@@ -1302,14 +1496,22 @@
               </p>
             </div>
 
-            <div class="interest-icon">→</div>
+            <div class="interest-icon">
+              →
+            </div>
+
           </article>
 
           <article class="interest-item reveal">
-            <div class="interest-number">03</div>
+
+            <div class="interest-number">
+              03
+            </div>
 
             <div>
-              <h3>Business Models & Marketing</h3>
+              <h3>
+                Business Models & Marketing
+              </h3>
 
               <p>
                 Business strategy, customer psychology,
@@ -1317,14 +1519,22 @@
               </p>
             </div>
 
-            <div class="interest-icon">→</div>
+            <div class="interest-icon">
+              →
+            </div>
+
           </article>
 
           <article class="interest-item reveal">
-            <div class="interest-number">04</div>
+
+            <div class="interest-number">
+              04
+            </div>
 
             <div>
-              <h3>Travel Guides</h3>
+              <h3>
+                Travel Guides
+              </h3>
 
               <p>
                 Practical travel planning,
@@ -1332,14 +1542,22 @@
               </p>
             </div>
 
-            <div class="interest-icon">→</div>
+            <div class="interest-icon">
+              →
+            </div>
+
           </article>
 
           <article class="interest-item reveal">
-            <div class="interest-number">05</div>
+
+            <div class="interest-number">
+              05
+            </div>
 
             <div>
-              <h3>Current Affairs & News</h3>
+              <h3>
+                Current Affairs & News
+              </h3>
 
               <p>
                 Analysis of important political,
@@ -1347,7 +1565,10 @@
               </p>
             </div>
 
-            <div class="interest-icon">→</div>
+            <div class="interest-icon">
+              →
+            </div>
+
           </article>
 
         </div>
@@ -1388,72 +1609,96 @@
             class="project-card reveal"
             href="page1.html"
           >
+
             <div class="project-number">
               PROJECT 01
             </div>
 
-            <h3>Economics & Markets</h3>
+            <h3>
+              Economics & Markets
+            </h3>
 
             <p>
               Notes and analysis on economic policy,
               financial markets, investment, and global trends.
             </p>
 
-            <span class="project-arrow">→</span>
+            <span class="project-arrow">
+              →
+            </span>
+
           </a>
 
           <a
             class="project-card reveal"
             href="page2.html"
           >
+
             <div class="project-number">
               PROJECT 02
             </div>
 
-            <h3>Political Thought</h3>
+            <h3>
+              Political Thought
+            </h3>
 
             <p>
               Essays and reading notes on conservatism,
               political philosophy, institutions, and society.
             </p>
 
-            <span class="project-arrow">→</span>
+            <span class="project-arrow">
+              →
+            </span>
+
           </a>
 
           <a
             class="project-card reveal"
             href="page3.html"
           >
+
             <div class="project-number">
               PROJECT 03
             </div>
 
-            <h3>Business & Marketing</h3>
+            <h3>
+              Business & Marketing
+            </h3>
 
             <p>
               Observations on business models,
               branding, consumer behavior, and market strategy.
             </p>
 
-            <span class="project-arrow">→</span>
+            <span class="project-arrow">
+              →
+            </span>
+
           </a>
 
           <a
             class="project-card reveal"
             href="page4.html"
           >
+
             <div class="project-number">
               PROJECT 04
             </div>
 
-            <h3>Travel & Field Notes</h3>
+            <h3>
+              Travel & Field Notes
+            </h3>
 
             <p>
               Destination guides, practical travel plans,
               local observations, and cultural experiences.
             </p>
 
-            <span class="project-arrow">→</span>
+            <span class="project-arrow">
+              →
+            </span>
+
           </a>
 
         </div>
@@ -1483,7 +1728,7 @@
 
           <p class="section-description">
             Recent writing on economics, politics,
-            business, travel, and current affairs.
+            business, travel, faith, and current affairs.
           </p>
 
         </div>
@@ -1494,6 +1739,7 @@
             class="article-item reveal"
             href="article1.html"
           >
+
             <span class="article-date">
               2026.01
             </span>
@@ -1502,13 +1748,17 @@
               Understanding Markets in an Age of Uncertainty
             </span>
 
-            <span class="article-arrow">→</span>
+            <span class="article-arrow">
+              →
+            </span>
+
           </a>
 
           <a
             class="article-item reveal"
             href="article2.html"
           >
+
             <span class="article-date">
               2025.12
             </span>
@@ -1517,13 +1767,17 @@
               Notes on Anglo-American Conservatism
             </span>
 
-            <span class="article-arrow">→</span>
+            <span class="article-arrow">
+              →
+            </span>
+
           </a>
 
           <a
             class="article-item reveal"
             href="article3.html"
           >
+
             <span class="article-date">
               2025.11
             </span>
@@ -1532,13 +1786,17 @@
               Why Some Business Models Create Lasting Value
             </span>
 
-            <span class="article-arrow">→</span>
+            <span class="article-arrow">
+              →
+            </span>
+
           </a>
 
           <a
             class="article-item reveal"
             href="article4.html"
           >
+
             <span class="article-date">
               2025.10
             </span>
@@ -1547,7 +1805,10 @@
               Building a Better Travel Research System
             </span>
 
-            <span class="article-arrow">→</span>
+            <span class="article-arrow">
+              →
+            </span>
+
           </a>
 
         </div>
@@ -1610,11 +1871,12 @@
   </main>
 
   <footer>
-    © 2026 Roland. Independent thinking, writing, and inquiry.
+    © 2026 Roland. Faith, independent thinking, writing, and inquiry.
   </footer>
 
   <script>
-    const siteHeader = document.getElementById("siteHeader");
+    const siteHeader =
+      document.getElementById("siteHeader");
 
     function updateHeader() {
       if (window.scrollY > 40) {
@@ -1626,27 +1888,30 @@
 
     updateHeader();
 
-    window.addEventListener("scroll", updateHeader, {
-      passive: true
-    });
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive: true }
+    );
 
     const revealElements =
       document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
-      const revealObserver = new IntersectionObserver(
-        function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.12
-        }
-      );
+      const revealObserver =
+        new IntersectionObserver(
+          function(entries, observer) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12
+          }
+        );
 
       revealElements.forEach(function(element) {
         revealObserver.observe(element);
